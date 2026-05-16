@@ -33,8 +33,18 @@ public class TadCola<T> implements Cola<T> {
     }
 
     @Override
-    public T desencolar() {
-        return null;
+    public T desencolar() throws ColaVacia {
+        if(colaVacia()){
+            throw new ColaVacia("Desencolar: la cola se encuentra vacia");
+        }else{
+            T resultado;
+            resultado = principio.dato;
+            principio = principio.siguiente;
+            if(principio == null){
+                fin = null;
+            }
+            return resultado;
+        }
     }
 
     @Override
