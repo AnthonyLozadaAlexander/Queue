@@ -35,4 +35,19 @@ public class TadCola<T> implements Cola<T> {
     public String getNombre() {
         return "";
     }
+
+    @Override
+    public void mostrarEstadoCola() {
+
+    }
+
+    @Override
+    public void eliminarCola() {
+
+    }
+
+    @Override
+    public boolean colaVacia() {
+        return false;
+    }
 }
