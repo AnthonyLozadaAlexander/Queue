@@ -3,7 +3,7 @@
 public interface Cola <T>{
 
     void encolar(T dato);
-    T desencolar();
+    T desencolar() throws ColaVacia;
     void decapitar();
     void imprimirCola();
     int numElemCola();
