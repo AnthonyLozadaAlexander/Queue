@@ -1,4 +1,4 @@
-﻿package tadCola;
+package tadCola;
 
 public interface Cola <T>{
 
