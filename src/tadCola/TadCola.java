@@ -37,19 +37,14 @@ public class TadCola<T> implements Cola<T> {
         if(colaVacia()){
             throw new ColaVacia("Desencolar: la cola se encuentra vacia");
         }else{
-            T resultado;
-            resultado = principio.dato;
-            principio = principio.siguiente;
-            if(principio == null){
-                fin = null;
+            T resultado; // guardar el resultado
+            resultado = principio.dato; // principio.dato se refiere al primer elemento de la cola
+            principio = principio.siguiente; // principio avanzara al siguiente elemento de la cola
+            if(principio == null){ // si principio es igual a null
+                fin = null; // puntero fin apunta al null
             }
-            return resultado;
+            return resultado; // muestra el resultado desencolado de la cola
         }
-    }
-
-    @Override
-    public void decapitar() {
-
     }
 
     @Override
