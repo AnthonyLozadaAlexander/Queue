@@ -2,8 +2,8 @@
 
 public class TadCola<T> implements Cola<T> {
 
-    private NodoCola<T> principio;
-    private NodoCola<T> fin;
+    private NodoCola<T> principio; // puntero principio
+    private NodoCola<T> fin; // puntero final
     private String nombre;
 
     public TadCola(){
@@ -54,6 +54,15 @@ public class TadCola<T> implements Cola<T> {
 
     @Override
     public void imprimirCola() {
+        NodoCola<T> aux;
+        System.out.println("Cola: "+ this.nombre);
+        aux = principio; // aux copia la cola principio (original)
+        while(aux != null){
+            System.out.print(aux.dato + " ");
+            aux = aux.siguiente; // aux avanza al siguiente posicion de la Cola
+        }
+
+        System.out.println();
 
     }
 
