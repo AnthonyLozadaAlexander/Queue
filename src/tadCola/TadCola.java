@@ -17,9 +17,19 @@ public class TadCola<T> implements Cola<T> {
         fin = null;
         this.nombre = nombre;
     }
+
     @Override
     public void encolar(T dato) {
+        NodoCola<T> aux;
+        aux = new NodoCola<>(dato, null);
 
+        if(principio == null){
+            principio = aux;
+            fin = aux;
+        }else{
+            fin.siguiente = aux;
+            fin = aux;
+        }
     }
 
     @Override
@@ -49,7 +59,7 @@ public class TadCola<T> implements Cola<T> {
 
     @Override
     public String getNombre() {
-        return "";
+        return nombre;
     }
 
     @Override
