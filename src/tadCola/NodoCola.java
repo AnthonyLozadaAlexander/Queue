@@ -1,4 +1,4 @@
-﻿package tadCola;
+package tadCola;
 
 public class NodoCola<T> {
     T dato;
