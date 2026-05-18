@@ -92,19 +92,20 @@ public class TadCola<T> implements Cola<T> {
         System.out.println("Estado De La Cola:");
         System.out.println("Numero Elementos: " + this.numElemCola());
         if(!colaVacia()){
-            System.out.println("Primer Elemento: " + " [Principio] -> " + principio.dato);
-            System.out.println("Ultimo Elemento: " + " [Fin] -> " + fin.dato);
+            System.out.println("Primer Elemento: " + " [Principio] -> " + principio.dato); // principio.dato es el elemento primero que esta conectado al puntero principio
+            System.out.println("Ultimo Elemento: " + " [Fin] -> " + fin.dato); // fin.dato es el elemento final de la cola que esta conectado al puntero fin
         }
 
     }
 
     @Override
     public void eliminarCola() {
-
+        principio = null; // desconectamos el nodo del principio
+        fin = null; // desconectamos el nodo del final
     }
 
     @Override
     public boolean colaVacia() {
-        return false;
+        return principio == null;
     }
 }
