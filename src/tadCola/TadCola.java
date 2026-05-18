@@ -89,6 +89,12 @@ public class TadCola<T> implements Cola<T> {
 
     @Override
     public void mostrarEstadoCola() {
+        System.out.println("Estado De La Cola:");
+        System.out.println("Numero Elementos: " + this.numElemCola());
+        if(!colaVacia()){
+            System.out.println("Primer Elemento: " + " [Principio] -> " + principio.dato);
+            System.out.println("Ultimo Elemento: " + " [Fin] -> " + fin.dato);
+        }
 
     }
 
