@@ -23,6 +23,8 @@ public class principalCola {
         }
 
         cola.imprimirCola();
+        cola.invertirCola();
+        cola.imprimirCola();
 
 
     }
