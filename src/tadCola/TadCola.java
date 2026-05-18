@@ -63,7 +63,6 @@ public class TadCola<T> implements Cola<T> {
 
     @Override
     public int numElemCola() {
-        boolean vacio = colaVacia();
         int count = 0;
         NodoCola<T> aux; // nodo Auxiliar
 
@@ -79,7 +78,20 @@ public class TadCola<T> implements Cola<T> {
 
     @Override
     public void invertirCola() {
+        int n = numElemCola();
+        T vector[] = (T[]) new Object[n]; // vector de tipo Generico
+        for (int i = 0; i < n; i++) {
+            vector[i] = principio.dato; // el vector va guardar los elementos del nodo principio.dato
+            principio = principio.siguiente; // el nodo se mueve al siguiente nodo
+            if(principio == null){ // cuando el nodo principio este vacio
+                fin = null; // puntero fin apuntara a null
+            }
 
+        }
+
+        for (int i = n-1; i >= 0 ; i++) {
+            this.encolar(vector[i]); // va encolar los elementos del vector invertidos a la cola
+        }
     }
 
     @Override
