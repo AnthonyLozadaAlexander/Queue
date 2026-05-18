@@ -89,7 +89,7 @@ public class TadCola<T> implements Cola<T> {
 
         }
 
-        for (int i = n-1; i >= 0 ; i++) {
+        for (int i = n-1; i >= 0 ; i--) {
             this.encolar(vector[i]); // va encolar los elementos del vector invertidos a la cola
         }
     }
